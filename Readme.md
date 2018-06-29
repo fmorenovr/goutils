@@ -11,6 +11,7 @@ Example:
 
 If you wan to compare different interfaces with an Integer parse:
 
+  ´´´go
     var a, b interface{}
     a = 2
     b = 5
@@ -18,6 +19,7 @@ If you wan to compare different interfaces with an Integer parse:
     // this should return 1 if a>b
     // this should return -1 if a<b
     // this should return 0 if a=b
+  ´´´
     
 Or define your own comparator function:
 
