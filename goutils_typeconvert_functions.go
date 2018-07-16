@@ -83,3 +83,45 @@ func ToInt(value interface{}) int {
       return ln
   }
 }
+
+// ToInt8 converts a value to int8.
+func ToInt8(value interface{}) int8 {
+  switch value.(type) {
+    case string:
+      v, _ := strconv.ParseInt(value.(string), 10, 64)
+      return int8(v)
+    case int8:
+      return value.(int8)
+    case int:
+      return int8(value.(int))
+    case int16:
+      return int8(value.(int16))
+    case int32:
+      return int8(value.(int32))
+    case int64:
+      return int8(value.(int64))
+    case uint:
+      return int8(value.(uint))
+    case uint8:
+      return int8(value.(uint8))
+    case uint16:
+      return int8(value.(uint16))
+    case uint32:
+      return int8(value.(uint32))
+    case uint64:
+      return int8(value.(uint64))
+    case float32:
+      return int8(value.(float32))
+    case float64:
+      return int8(value.(float64))
+    case bool:
+      if value.(bool) {
+        return int8(1)
+      } else {
+        return int8(0)
+      }
+    default:
+      ln, _ := fmt.Println(reflect.TypeOf(value))
+      return int8(ln)
+  }
+}
