@@ -1,7 +1,7 @@
 package goutils
 
 // Principal functions for Data Structures
-type DSFuncs interface {
+type MainFuncs interface {
   IsEmpty() bool
   Size() int
   Clear()
