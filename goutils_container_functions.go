@@ -1,7 +1,7 @@
 package goutils
 
-// Principal functions for Data Structures
-type MainFuncs interface {
+// Principal container description for Data Structures
+type Container interface {
   IsEmpty() bool
   Size() int
   Clear()

@@ -1,12 +1,20 @@
 package goutils
 
-import "time"
+import(
+  "time";
+)
+
+/*
+  int    alias for uint
+  byte   alias for uint8
+  rune   alias for int32
+*/
 
 // Compare a,b:
 //  -1 , if a < b
 //  0  , if a == b
 //  1  , if a > b
-// class function
+
 type TypeComparator func(a, b interface{}) int
 
 // Compare strings

@@ -2,9 +2,15 @@ package goutils
 
 import (
   "fmt";
-  "reflect"
+  "reflect";
   "strconv";
 )
+
+/*
+  int    alias for uint
+  byte   alias for uint8
+  rune   alias for int32
+*/
 
 // ToString converts a value to string.
 func ToString(value interface{}) string {
@@ -49,7 +55,7 @@ func ToInt(value interface{}) int {
       v, _ := strconv.ParseInt(value.(string), 10, 64)
       return int(v)
     case int:
-      return value.(int)
+      return int(value.(int))
     case int8:
       return int(value.(int8))
     case int16:
@@ -90,10 +96,10 @@ func ToInt8(value interface{}) int8 {
     case string:
       v, _ := strconv.ParseInt(value.(string), 10, 64)
       return int8(v)
-    case int8:
-      return value.(int8)
     case int:
       return int8(value.(int))
+    case int8:
+      return int8(value.(int8))
     case int16:
       return int8(value.(int16))
     case int32:
@@ -123,5 +129,425 @@ func ToInt8(value interface{}) int8 {
     default:
       ln, _ := fmt.Println(reflect.TypeOf(value))
       return int8(ln)
+  }
+}
+
+// ToInt16 converts a value to int16.
+func ToInt16(value interface{}) int16 {
+  switch value.(type) {
+    case string:
+      v, _ := strconv.ParseInt(value.(string), 10, 64)
+      return int16(v)
+    case int:
+      return int16(value.(int))
+    case int8:
+      return int16(value.(int8))
+    case int16:
+      return int16(value.(int16))
+    case int32:
+      return int16(value.(int32))
+    case int64:
+      return int16(value.(int64))
+    case uint:
+      return int16(value.(uint))
+    case uint8:
+      return int16(value.(uint8))
+    case uint16:
+      return int16(value.(uint16))
+    case uint32:
+      return int16(value.(uint32))
+    case uint64:
+      return int16(value.(uint64))
+    case float32:
+      return int16(value.(float32))
+    case float64:
+      return int16(value.(float64))
+    case bool:
+      if value.(bool) {
+        return int16(1)
+      } else {
+        return int16(0)
+      }
+    default:
+      ln, _ := fmt.Println(reflect.TypeOf(value))
+      return int16(ln)
+  }
+}
+
+// ToInt32 converts a value to int32.
+func ToInt32(value interface{}) int32 {
+  switch value.(type) {
+    case string:
+      v, _ := strconv.ParseInt(value.(string), 10, 64)
+      return int32(v)
+    case int:
+      return int32(value.(int))
+    case int8:
+      return int32(value.(int8))
+    case int16:
+      return int32(value.(int16))
+    case int32:
+      return int32(value.(int32))
+    case int64:
+      return int32(value.(int64))
+    case uint:
+      return int32(value.(uint))
+    case uint8:
+      return int32(value.(uint8))
+    case uint16:
+      return int32(value.(uint16))
+    case uint32:
+      return int32(value.(uint32))
+    case uint64:
+      return int32(value.(uint64))
+    case float32:
+      return int32(value.(float32))
+    case float64:
+      return int32(value.(float64))
+    case bool:
+      if value.(bool) {
+        return int32(1)
+      } else {
+        return int32(0)
+      }
+    default:
+      ln, _ := fmt.Println(reflect.TypeOf(value))
+      return int32(ln)
+  }
+}
+
+// ToInt64 converts a value to int64.
+func ToInt64(value interface{}) int64 {
+  switch value.(type) {
+    case string:
+      v, _ := strconv.ParseInt(value.(string), 10, 64)
+      return int64(v)
+    case int:
+      return int64(value.(int))
+    case int8:
+      return int64(value.(int8))
+    case int16:
+      return int64(value.(int16))
+    case int32:
+      return int64(value.(int32))
+    case int64:
+      return int64(value.(int64))
+    case uint:
+      return int64(value.(uint))
+    case uint8:
+      return int64(value.(uint8))
+    case uint16:
+      return int64(value.(uint16))
+    case uint32:
+      return int64(value.(uint32))
+    case uint64:
+      return int64(value.(uint64))
+    case float32:
+      return int64(value.(float32))
+    case float64:
+      return int64(value.(float64))
+    case bool:
+      if value.(bool) {
+        return int64(1)
+      } else {
+        return int64(0)
+      }
+    default:
+      ln, _ := fmt.Println(reflect.TypeOf(value))
+      return int64(ln)
+  }
+}
+
+// ToUInt converts a value to uint.
+func ToUInt(value interface{}) uint {
+  switch value.(type) {
+    case string:
+      v, _ := strconv.ParseInt(value.(string), 10, 64)
+      return uint(v)
+    case int:
+      return uint(value.(int))
+    case int8:
+      return uint(value.(int8))
+    case int16:
+      return uint(value.(int16))
+    case int32:
+      return uint(value.(int32))
+    case int64:
+      return uint(value.(int64))
+    case uint:
+      return uint(value.(uint))
+    case uint8:
+      return uint(value.(uint8))
+    case uint16:
+      return uint(value.(uint16))
+    case uint32:
+      return uint(value.(uint32))
+    case uint64:
+      return uint(value.(uint64))
+    case float32:
+      return uint(value.(float32))
+    case float64:
+      return uint(value.(float64))
+    case bool:
+      if value.(bool) {
+        return uint(1)
+      } else {
+        return uint(0)
+      }
+    default:
+      ln, _ := fmt.Println(reflect.TypeOf(value))
+      return uint(ln)
+  }
+}
+
+// ToUInt8 converts a value to uint8.
+func ToUInt8(value interface{}) uint8 {
+  switch value.(type) {
+    case string:
+      v, _ := strconv.ParseInt(value.(string), 10, 64)
+      return uint8(v)
+    case int:
+      return uint8(value.(int))
+    case int8:
+      return uint8(value.(int8))
+    case int16:
+      return uint8(value.(int16))
+    case int32:
+      return uint8(value.(int32))
+    case int64:
+      return uint8(value.(int64))
+    case uint:
+      return uint8(value.(uint))
+    case uint8:
+      return uint8(value.(uint8))
+    case uint16:
+      return uint8(value.(uint16))
+    case uint32:
+      return uint8(value.(uint32))
+    case uint64:
+      return uint8(value.(uint64))
+    case float32:
+      return uint8(value.(float32))
+    case float64:
+      return uint8(value.(float64))
+    case bool:
+      if value.(bool) {
+        return uint8(1)
+      } else {
+        return uint8(0)
+      }
+    default:
+      ln, _ := fmt.Println(reflect.TypeOf(value))
+      return uint8(ln)
+  }
+}
+
+// ToUInt16 converts a value to uint16.
+func ToUInt16(value interface{}) uint16 {
+  switch value.(type) {
+    case string:
+      v, _ := strconv.ParseInt(value.(string), 10, 64)
+      return uint16(v)
+    case int:
+      return uint16(value.(int))
+    case int8:
+      return uint16(value.(int8))
+    case int16:
+      return uint16(value.(int16))
+    case int32:
+      return uint16(value.(int32))
+    case int64:
+      return uint16(value.(int64))
+    case uint:
+      return uint16(value.(uint))
+    case uint8:
+      return uint16(value.(uint8))
+    case uint16:
+      return uint16(value.(uint16))
+    case uint32:
+      return uint16(value.(uint32))
+    case uint64:
+      return uint16(value.(uint64))
+    case float32:
+      return uint16(value.(float32))
+    case float64:
+      return uint16(value.(float64))
+    case bool:
+      if value.(bool) {
+        return uint16(1)
+      } else {
+        return uint16(0)
+      }
+    default:
+      ln, _ := fmt.Println(reflect.TypeOf(value))
+      return uint16(ln)
+  }
+}
+
+// ToUInt32 converts a value to uint32.
+func ToUInt32(value interface{}) uint32 {
+  switch value.(type) {
+    case string:
+      v, _ := strconv.ParseInt(value.(string), 10, 64)
+      return uint32(v)
+    case int:
+      return uint32(value.(int))
+    case int8:
+      return uint32(value.(int8))
+    case int16:
+      return uint32(value.(int16))
+    case int32:
+      return uint32(value.(int32))
+    case int64:
+      return uint32(value.(int64))
+    case uint:
+      return uint32(value.(uint))
+    case uint8:
+      return uint32(value.(uint8))
+    case uint16:
+      return uint32(value.(uint16))
+    case uint32:
+      return uint32(value.(uint32))
+    case uint64:
+      return uint32(value.(uint64))
+    case float32:
+      return uint32(value.(float32))
+    case float64:
+      return uint32(value.(float64))
+    case bool:
+      if value.(bool) {
+        return uint32(1)
+      } else {
+        return uint32(0)
+      }
+    default:
+      ln, _ := fmt.Println(reflect.TypeOf(value))
+      return uint32(ln)
+  }
+}
+
+// ToUInt64 converts a value to uint64.
+func ToUInt64(value interface{}) uint64 {
+  switch value.(type) {
+    case string:
+      v, _ := strconv.ParseInt(value.(string), 10, 64)
+      return uint64(v)
+    case int:
+      return uint64(value.(int))
+    case int8:
+      return uint64(value.(int8))
+    case int16:
+      return uint64(value.(int16))
+    case int32:
+      return uint64(value.(int32))
+    case int64:
+      return uint64(value.(int64))
+    case uint:
+      return uint64(value.(uint))
+    case uint8:
+      return uint64(value.(uint8))
+    case uint16:
+      return uint64(value.(uint16))
+    case uint32:
+      return uint64(value.(uint32))
+    case uint64:
+      return uint64(value.(uint64))
+    case float32:
+      return uint64(value.(float32))
+    case float64:
+      return uint64(value.(float64))
+    case bool:
+      if value.(bool) {
+        return uint64(1)
+      } else {
+        return uint64(0)
+      }
+    default:
+      ln, _ := fmt.Println(reflect.TypeOf(value))
+      return uint64(ln)
+  }
+}
+
+// ToFloat32 converts a value to float32.
+func ToFloat32(value interface{}) float32 {
+  switch value.(type) {
+    case string:
+      v, _ := strconv.ParseInt(value.(string), 10, 64)
+      return float32(v)
+    case int:
+      return float32(value.(int))
+    case int8:
+      return float32(value.(int8))
+    case int16:
+      return float32(value.(int16))
+    case int32:
+      return float32(value.(int32))
+    case int64:
+      return float32(value.(int64))
+    case uint:
+      return float32(value.(uint))
+    case uint8:
+      return float32(value.(uint8))
+    case uint16:
+      return float32(value.(uint16))
+    case uint32:
+      return float32(value.(uint32))
+    case uint64:
+      return float32(value.(uint64))
+    case float32:
+      return float32(value.(float32))
+    case float64:
+      return float32(value.(float64))
+    case bool:
+      if value.(bool) {
+        return float32(1)
+      } else {
+        return float32(0)
+      }
+    default:
+      ln, _ := fmt.Println(reflect.TypeOf(value))
+      return float32(ln)
+  }
+}
+
+// ToFloat64 converts a value to float64.
+func ToFloat64(value interface{}) float64 {
+  switch value.(type) {
+    case string:
+      v, _ := strconv.ParseInt(value.(string), 10, 64)
+      return float64(v)
+    case int:
+      return float64(value.(int))
+    case int8:
+      return float64(value.(int8))
+    case int16:
+      return float64(value.(int16))
+    case int32:
+      return float64(value.(int32))
+    case int64:
+      return float64(value.(int64))
+    case uint:
+      return float64(value.(uint))
+    case uint8:
+      return float64(value.(uint8))
+    case uint16:
+      return float64(value.(uint16))
+    case uint32:
+      return float64(value.(uint32))
+    case uint64:
+      return float64(value.(uint64))
+    case float32:
+      return float64(value.(float32))
+    case float64:
+      return float64(value.(float64))
+    case bool:
+      if value.(bool) {
+        return float64(1)
+      } else {
+        return float64(0)
+      }
+    default:
+      ln, _ := fmt.Println(reflect.TypeOf(value))
+      return float64(ln)
   }
 }

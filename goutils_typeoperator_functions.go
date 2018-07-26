@@ -1,5 +1,11 @@
 package goutils
 
+/*
+  int    alias for uint
+  byte   alias for uint8
+  rune   alias for int32
+*/
+
 // Operate a,b:
 type TypeOperator func(a, b interface{}, op string) interface{}
 
