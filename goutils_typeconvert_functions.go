@@ -551,3 +551,77 @@ func ToFloat64(value interface{}) float64 {
       return float64(ln)
   }
 }
+
+// ToBool converts a value to bool
+func ToBool(value interface{}) bool {
+  switch value.(type) {
+    case string:
+      v, _ := strconv.ParseBool(value.(string))
+      return bool(v)
+    case int:
+      if value.(int) != 0 {
+        return true
+      }
+      return false
+    case int8:
+      if value.(int8) != 0 {
+        return true
+      }
+      return false
+    case int16:
+      if value.(int16) != 0 {
+        return true
+      }
+      return false
+    case int32:
+      if value.(int32) != 0 {
+        return true
+      }
+      return false
+    case int64:
+      if value.(int64) != 0 {
+        return true
+      }
+      return false
+    case uint:
+      if value.(uint) != 0 {
+        return true
+      }
+      return false
+    case uint8:
+      if value.(uint8) != 0 {
+        return true
+      }
+      return false
+    case uint16:
+      if value.(uint16) != 0 {
+        return true
+      }
+      return false
+    case uint32:
+      if value.(uint32) != 0 {
+        return true
+      }
+      return false
+    case uint64:
+      if value.(uint64) != 0 {
+        return true
+      }
+      return false
+    case float32:
+      if value.(float32) != 0 {
+        return true
+      }
+      return false
+    case float64:
+      if value.(float64) != 0 {
+        return true
+      }
+      return false
+    case bool:
+      return value.(bool)
+    default:
+      v, _ := strconv.ParseBool(value.(string))
+      return bool(v)
+  }
+}
