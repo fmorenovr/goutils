@@ -1,11 +1,11 @@
 # golang + Utilities = goutils
 
 goutils (Golang UTILitieS) is a Golang implementation of some functions and data types to help other libraries.  
-You can see an extended doc in [godocs](https://godoc.org/github.com/Jenazads/goutils).
+You can see an extended doc in [godocs](https://godoc.org/github.com/fmorenovr/goutils).
 
 Install it writing in terminal:
 
-    go get github.com/jenazads/goutils
+    go get github.com/fmorenovr/goutils
 
 Example:
 
